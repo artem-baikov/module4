@@ -3,6 +3,3 @@ def is_it_palindrome(st):
         print(True)
     else:
         print(False)
-
-
-is_it_palindrome('helloworld')
