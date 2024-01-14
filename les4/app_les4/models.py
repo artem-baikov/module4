@@ -50,6 +50,16 @@ class Advertisement(models.Model):
             )
 
         return self.updated_at.strftime('%d:%m:%Y в %H:%M')
+<<<<<<< HEAD
+=======
+
+    @admin.display(description='изображение')
+    def set_picture(self):
+        if self.image:
+            return format_html(
+                '<img src={} style="width: auto; height: 100px;">', self.image.url
+            )
+>>>>>>> origin/main
 
     @admin.display(description='изображение')
     def set_picture(self):

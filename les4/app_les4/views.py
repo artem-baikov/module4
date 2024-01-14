@@ -1,8 +1,15 @@
 from django.shortcuts import render, redirect
+<<<<<<< HEAD
 from django.urls import reverse, reverse_lazy
 from .forms import AdvertisementForm
 from .models import Advertisement
 from django.contrib.auth.decorators import login_required
+=======
+from django.http import HttpResponse
+from .models import Advertisement
+from .forms import AdvertisementForm
+from django.urls import reverse
+>>>>>>> origin/main
 
 def index(request):
     advertisements = Advertisement.objects.all()

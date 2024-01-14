@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 {% load static %}
+=======
+
+{% load static %}
+
+
+
+>>>>>>> origin/main
 {% block title %}
 Войти
 {% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
   <div class="container">
   <div class="row">
     <div class="col" style="margin: 50px;">
@@ -34,6 +43,63 @@
           <label class="col-sm-4 col-form-label offset-4">Username</label>
           <div class="col-sm-4 offset-4 w-25">
             <input name="username" id="username" type ="text" class="form-control form-control-lg">
+=======
+  <ul class="nav nav-pills sticky-top bg-white nav-fill">
+    <li class="nav-item">
+      <a class="nav-link"  href="{% url 'main-page' %}">
+        <span style="font-weight: bold;">Главная</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="{% url 'top-sellers' %}">
+        <span style="font-weight: bold;">Топ продавцов</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'advertisement-post' %}">
+        <span style="font-weight: bold;">Разместить объявление</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'register' %}">
+        <span style="font-weight: bold;">Регистрация</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="{% url 'login' %}">
+        <span style="font-weight: bold;">Войти</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'profile' %}">
+        <span style="font-weight: bold;">Профиль</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'logout' %}">
+        <span style="font-weight: bold;">Выйти</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-8" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">Страница авторизации пользователя</span>
+      </div>
+    </div>
+  </div>
+    {% if error %}
+    <div class="form-label bg-warning" style="margin:0 auto">{{ error }}</div>
+    {% endif %}
+    <form method="post">
+      <div class="row mb-3"> {% csrf_token %}
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Username</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input name="username" id="username" type="text" class="form-control form-control-lg">
+>>>>>>> origin/main
           </div>
         </div>
       </div>
@@ -41,7 +107,11 @@
         <div class="col">
           <label class="col-sm-4 col-form-label offset-4">Password</label>
           <div class="col-sm-4 offset-4 w-25">
+<<<<<<< HEAD
             <input name="password" id="password" type="password" class="form-control form-control-lg">
+=======
+            <input name="username" id="password" type="password" class="form-control form-control-lg">
+>>>>>>> origin/main
           </div>
         </div>
       </div>
@@ -52,7 +122,11 @@
       </div>
     </form>
   </div>
+<<<<<<< HEAD
 {% endblock %}
 
 {% block script %}
 {% endblock %}
+=======
+{% endblock %}
+>>>>>>> origin/main
